@@ -225,6 +225,40 @@ ul {
 }
 
 body {
+	--primary-color: hsl(0, 96%, 64%);;
+	--secondary-color: hsl(214, 79%, 49%);
+	--highlight-color: hsl(56, 100%, 65%);
+	--light-color: #f2f2f2;
+	--dark-color: hsl(150, 4%, 11%);
+
     display: flex;
     flex-direction: column;
+	height: 100vh;
+}
+
+header {
+	display:flex;
+	justify-content: space-between;
+	padding: 1rem;
+}
+
+main {
+	flex: 1;
+}
+
+footer {
+	display: flex;
+	justify-content: space-between;
+	padding: 1rem;
+}
+
+nav > ul {
+	display: flex;
+	gap: 1rem;
+}
+
+nav > ul button {
+	padding: 0;
+	background: none;
+	border: none
 }
