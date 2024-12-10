@@ -305,17 +305,16 @@ nav > ul button {
 
 .menu ul {
 	display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fill, 18rem);
     grid-auto-rows: min-content;
     gap: 2rem 1.2rem;
 }
 
 .menu ul li {
-	width: 16rem;
-	height: 12rem;
+	width: 18rem;
+	height: 8rem;
 
 	display: grid;
-	align-items: start;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
 	grid-template-areas:
@@ -323,20 +322,28 @@ nav > ul button {
         "desc desc"
 		"price order";
 
+	justify-items: start;
+	align-items: start;
+
+	border: 2px solid red;
+	border-radius: 10px;
+
+	padding: .8rem;
 }
 
 .menu ul li h3 {
-	grid-area: title
+	grid-area: title;
 }
 
 .menu ul li p {
-	grid-area: desc
+	grid-area: desc;
 }
 
 .menu ul li span {
-	grid-area: price
+	grid-area: price;
 }
 
 .menu ul li button {
-	grid-area: order
+	grid-area: order;
+	justify-self: end;
 }
