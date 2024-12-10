@@ -244,6 +244,7 @@ header {
 
 main {
 	flex: 1;
+	padding: 1rem;
 }
 
 footer {
@@ -294,4 +295,48 @@ nav > ul button {
 
 .home .info-el svg {
 	width: 4rem
+}
+
+.menu {
+	display: flex;
+	flex-direction: column;
+	gap: .8rem;
+}
+
+.menu ul {
+	display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-auto-rows: min-content;
+    gap: 2rem 1.2rem;
+}
+
+.menu ul li {
+	width: 16rem;
+	height: 12rem;
+
+	display: grid;
+	align-items: start;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+	grid-template-areas:
+        "title title"
+        "desc desc"
+		"price order";
+
+}
+
+.menu ul li h3 {
+	grid-area: title
+}
+
+.menu ul li p {
+	grid-area: desc
+}
+
+.menu ul li span {
+	grid-area: price
+}
+
+.menu ul li button {
+	grid-area: order
 }
