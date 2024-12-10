@@ -262,3 +262,36 @@ nav > ul button {
 	background: none;
 	border: none
 }
+
+.home {
+	display: flex;
+	flex-direction: column;
+}
+
+.home .hero-section {
+	flex: 1;
+	display: grid;
+	place-content: center;
+	gap: 1rem;
+	text-align: center;
+}
+
+.home .info-section {
+	display: flex;
+	gap: 2rem;
+	justify-content: center;
+	padding: 2rem;
+}
+
+.home .info-el {
+	display: flex;
+	flex-direction: column;
+	gap: .8rem;
+	align-items: center;
+	text-align: center;
+	flex-basis: 16rem;
+}
+
+.home .info-el svg {
+	width: 4rem
+}
