@@ -363,11 +363,11 @@ nav > ul button {
 
 .menu ul li {
 	width: 18rem;
-	height: 8rem;
+	height: 100%;
 
 	display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: min-content min-content min-content;
 	grid-template-areas:
         "title title"
         "desc desc"
@@ -375,6 +375,7 @@ nav > ul button {
 
 	justify-items: start;
 	align-items: start;
+	row-gap: .4rem;
 
 	border-radius: 10px;
 	background-color: var(--light-secondary);
