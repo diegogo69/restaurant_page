@@ -236,7 +236,8 @@ body {
 	--light-primary: hsl(0, 1%, 98%);
 	--light-secondary: hsl(0, 1%, 95%);
 	--dark-primary: hsl(350, 7%, 17%);
-	--dark-secondary: hsl(150, 4%, 11%);
+	--dark-secondary: hsl(0, 1%, 85%);
+	--dark-tertiary: hsl(283, 4%, 37%);
 
     display: flex;
     flex-direction: column;
@@ -251,6 +252,7 @@ header {
 	padding: 1rem 2rem;
 	height: 4rem;
 	background-color: var(--light-secondary);
+	border-bottom: 2px solid var(--dark-secondary);
 }
 
 header .logo {
@@ -348,6 +350,7 @@ nav > ul button {
 	display: flex;
 	flex-direction: column;
 	gap: .8rem;
+	padding: 1rem 2rem;
 }
 
 .menu ul {
@@ -355,6 +358,7 @@ nav > ul button {
     grid-template-columns: repeat(auto-fill, 18rem);
     grid-auto-rows: min-content;
     gap: 2rem 1.2rem;
+	/* border-top: 2px solid var(--primary-color); */
 }
 
 .menu ul li {
@@ -372,14 +376,27 @@ nav > ul button {
 	justify-items: start;
 	align-items: start;
 
-	border: 2px solid red;
 	border-radius: 10px;
+	background-color: var(--light-secondary);
+	border: 3px solid var(--dark-secondary);
+	box-shadow: 0px 0px 5px var(--light-secondary);
 
 	padding: .8rem;
 }
 
+.menu ul {
+	margin-bottom: 1rem;
+	/* margin-top: .2rem; */
+}
+
+.menu h2 {
+	font-size: 1.6rem
+}
+
 .menu ul li h3 {
 	grid-area: title;
+	color: var(--primary-color);
+
 }
 
 .menu ul li p {
@@ -388,11 +405,21 @@ nav > ul button {
 
 .menu ul li span {
 	grid-area: price;
+	color: var(--dark-tertiary);
+	font-size: 1.2rem;
+	align-self: center;
 }
 
 .menu ul li button {
 	grid-area: order;
 	justify-self: end;
+	
+	border: none;
+	border-radius: .6rem;
+	padding: .6rem 1rem;
+	background-color: var(--primary-color);
+	color: var(--light-primary);
+	font-weight: 900;
 }
 
 
