@@ -26,7 +26,7 @@ html {
 		sans-serif,
 		'Apple Color Emoji',
 		'Segoe UI Emoji';
-	line-height: 1.15; /* 1. Correct the line height in all browsers. */
+	line-height: 1.25; /* 1. Correct the line height in all browsers. */
 	-webkit-text-size-adjust: 100%; /* 2. Prevent adjustments of font size after orientation changes in iOS. */
 	tab-size: 4; /* 3. Use a more readable tab size (opinionated). */
 }
@@ -131,7 +131,7 @@ select,
 textarea {
 	font-family: inherit; /* 1 */
 	font-size: 100%; /* 1 */
-	line-height: 1.15; /* 1 */
+	line-height: 1.25; /* 1 */
 	margin: 0; /* 2 */
 }
 
@@ -224,27 +224,44 @@ ul {
 	list-style: none;
 }
 
+svg {
+	fill: var(--dark-primary);
+}
+
 body {
-	--primary-color: hsl(0, 96%, 64%);;
-	--secondary-color: hsl(214, 79%, 49%);
+	--primary-color: hsl(0, 97%, 64%);
+	--primary-light: hsl(0, 97%, 74%);
+	--secondary-color: hsl(214, 68%, 43%);
 	--highlight-color: hsl(56, 100%, 65%);
-	--light-color: #f2f2f2;
-	--dark-color: hsl(150, 4%, 11%);
+	--light-primary: hsl(0, 1%, 98%);
+	--light-secondary: hsl(0, 1%, 95%);
+	--dark-primary: hsl(350, 7%, 17%);
+	--dark-secondary: hsl(150, 4%, 11%);
 
     display: flex;
     flex-direction: column;
 	height: 100vh;
+	color: var(--dark-primary);
 }
 
 header {
 	display:flex;
 	justify-content: space-between;
-	padding: 1rem;
+	align-items: center;
+	padding: 1rem 2rem;
+	height: 4rem;
+	background-color: var(--light-secondary);
+}
+
+header .logo {
+	font-weight: 900;
+	font-size: 1.2rem;
+	color: var(--primary-color);
 }
 
 main {
 	flex: 1;
-	padding: 1rem;
+	background-color: var(--light-primary);
 }
 
 footer {
@@ -255,15 +272,19 @@ footer {
 
 nav > ul {
 	display: flex;
-	gap: 1rem;
 }
 
 nav > ul button {
 	padding: 0;
 	background: none;
-	border: none
+	border: none;
+	padding: 0.6rem 1.2rem;
+	font-size: 1.1rem;
 }
 
+
+
+/* ------ HOME ------ */
 .home {
 	display: flex;
 	flex-direction: column;
@@ -297,6 +318,32 @@ nav > ul button {
 	width: 4rem
 }
 
+.home h1 {
+	color: var(--primary-color);
+}
+
+.home h1 {
+	font-size: 2.2rem;
+}
+
+.home .hero-section p {
+	font-size: 1.2rem;
+}
+
+.home .info-section {
+	/* background-color: var(--light-secondary); */
+	background-color: var(--primary-color);
+	color: var(--light-primary);
+
+}
+
+.home svg {
+	/* fill: var(--primary-color); */
+	fill: var(--light-primary);
+}
+
+
+/* ----- MENU ------- */
 .menu {
 	display: flex;
 	flex-direction: column;
@@ -346,4 +393,57 @@ nav > ul button {
 .menu ul li button {
 	grid-area: order;
 	justify-self: end;
+}
+
+
+
+/* ----- ABOUT ----- */
+.about {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-content: start;
+	justify-items: center;
+
+}
+
+.about svg {
+	width: 2rem;
+}
+
+.about ul {
+	display: grid;
+	align-content: start;
+	gap: 1rem;
+
+	border: 2px solid red;
+	border-radius: .8rem;
+	padding: 1rem;
+}
+
+.about li {
+	display: flex;
+	align-items: center;
+	gap: .8rem;
+}
+
+.about form {
+	display: grid;
+	gap: .8rem;
+
+	border: 2px solid red;
+	border-radius: .8rem;
+	padding: 1rem;
+}
+
+.about form .inputWrapper {
+	display: grid;
+	gap: .4rem;
+}
+
+.about input,
+.about textarea {
+	outline: none;
+	border: 2px solid black;
+	border-radius: .6rem;
+	padding: .4rem;
 }
