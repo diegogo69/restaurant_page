@@ -429,23 +429,43 @@ nav > ul button {
 .about {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
+	grid-template-rows: min-content 1fr;
+	grid-template-areas:
+		"header header"
+		"info form";
 	align-content: start;
-	justify-items: center;
+	justify-items: stretch;
+	align-items: start;
+	gap: 1rem 2rem;
+
+	padding: 2rem;
 
 }
 
 .about svg {
-	width: 2rem;
+	width: 2.4rem;
+	fill: var(--primary-color);
+}
+
+.about h1 {
+	grid-area: header;
+}
+
+.about ul,
+.about form {
+	border: 3px solid var(--dark-secondary);
+	background-color: var(--light-secondary);
 }
 
 .about ul {
 	display: grid;
 	align-content: start;
 	gap: 1rem;
+	grid-area: info;
 
-	border: 2px solid red;
 	border-radius: .8rem;
 	padding: 1rem;
+	font-size: 1.1rem;
 }
 
 .about li {
@@ -457,15 +477,20 @@ nav > ul button {
 .about form {
 	display: grid;
 	gap: .8rem;
-
-	border: 2px solid red;
+	grid-area: form;
+	grid-auto-rows: min-content;
 	border-radius: .8rem;
 	padding: 1rem;
 }
 
 .about form .inputWrapper {
 	display: grid;
+	grid-auto-rows: min-content;
 	gap: .4rem;
+}
+
+.about label {
+	font-weight: 900;
 }
 
 .about input,
@@ -473,5 +498,19 @@ nav > ul button {
 	outline: none;
 	border: 2px solid black;
 	border-radius: .6rem;
-	padding: .4rem;
+	padding: .4rem .8rem;
+	background-color: #fefefe;
+}
+
+.about textarea {
+	height: 6rem;
+}
+
+.about button {
+	padding: 1.2rem 1.2rem;
+	background-color: var(--primary-color);
+	border-radius: .6rem;
+	color: var(--light-primary);
+	font-weight: 900;
+	border: none;
 }
