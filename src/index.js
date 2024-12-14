@@ -2,6 +2,7 @@
 import "./styles.css";
 import { homePage } from "./home.js";
 import { menuPage } from "./menu.js"
+import { aboutPage } from "./about.js"
 
 const log = console.log;
 log("hello world")
@@ -20,4 +21,5 @@ function clearMain() {
 }
 
 // renderMain(homePage.createContentDiv());
-renderMain(menuPage.createContentDiv());
+// renderMain(menuPage.createContentDiv());
+renderMain(aboutPage.createContentDiv());

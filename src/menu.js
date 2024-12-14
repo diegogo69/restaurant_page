@@ -117,6 +117,7 @@ const menuPage = ( function() {
         return ul;
     };
 
+    // Create .menu node
     function createContentDiv() {
         const content = document.createElement('div');
         content.classList.add('menu');
