@@ -58,8 +58,8 @@ const homePage = ( function() {
             for (let el of contents.info) {
                 // div .info-el
                 const infoEl = document.createElement('div');
-                infoEl.classList.add('info-el')
-rea
+                infoEl.classList.add('info-el');
+
                 // svg
                 const svgDiv = document.createElement('div');
                 svgDiv.innerHTML = el.svg;

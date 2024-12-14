@@ -4,22 +4,43 @@ import { homePage } from "./home.js";
 import { menuPage } from "./menu.js"
 import { aboutPage } from "./about.js"
 
-const log = console.log;
-log("hello world")
 
+const main = ( function() {
+    
+    const contents = document.querySelector('#content');
+    
+    function renderContents(node) {
+        contents.appendChild(node);
+    }
+    
+    function clearContents() {
+        while (contents.firstChild) {
+            contents.removeChild(contents.firstChild);
+          }
+    }
 
-const main = document.querySelector('#content');
+    const renders = {
+        home() {
+            clearContents();
+            renderContents(homePage.createContentDiv());
+        },
 
-function renderMain(node) {
-    main.appendChild(node);
-}
+        menu() {
+            clearContents();
+            renderContents(menuPage.createContentDiv());
+        },
 
-function clearMain() {
-    while (main.firstChild) {
-        main.removeChild(main.firstChild);
-      }
-}
+        about() {
+            clearContents();
+            renderContents(aboutPage.createContentDiv());
+        },
+    };
 
-// renderMain(homePage.createContentDiv());
-// renderMain(menuPage.createContentDiv());
-renderMain(aboutPage.createContentDiv());
+    // Tab button references
+    const tabs = document.querySelectorAll(".tabBtn");
+    tabs.forEach( tab => {
+        tab.addEventListener("click", renders[tab.dataset.value]);
+    });
+
+    renders.home();
+} )();
