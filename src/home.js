@@ -59,7 +59,7 @@ const homePage = ( function() {
                 // div .info-el
                 const infoEl = document.createElement('div');
                 infoEl.classList.add('info-el')
-
+rea
                 // svg
                 const svgDiv = document.createElement('div');
                 svgDiv.innerHTML = el.svg;
@@ -97,7 +97,6 @@ const homePage = ( function() {
     }
 
     return { createContentDiv }
-    }
-)();
+})();
 
 export { homePage }
