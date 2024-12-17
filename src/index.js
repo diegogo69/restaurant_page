@@ -1,8 +1,9 @@
 // Import css for webpack to bundle it in dist index.html
-import "./styles.css";
-import { homePage } from "./home.js";
-import { menuPage } from "./menu.js"
-import { aboutPage } from "./about.js"
+import "./static/modern-normalize.css";
+import "./static/styles.css";
+import { homePage } from "./modules/home.js";
+import { menuPage } from "./modules/menu.js"
+import { aboutPage } from "./modules/about.js"
 
 
 const main = ( function() {
